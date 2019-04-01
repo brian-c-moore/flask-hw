@@ -9,7 +9,6 @@ RUN apk update && \
     pip install --upgrade pip setuptools && \
     rm -r /root/.cache
 
-# We copy this file first to leverage docker cache
 COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
